@@ -1,15 +1,24 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import {
+  Footer,
+  Loader,
+  Welcome,
+  Transactions,
+  Navbar,
+  Services,
+} from "./components/index.js";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className="min-h-screen">
+      <div className="gradient-bg-welcome">
+        <Navbar />
+        <Welcome />
+      </div>
+      <Services />
+      <Transactions />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
